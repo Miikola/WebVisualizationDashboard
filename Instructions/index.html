@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand darkcyanbackground" href="index.html">Latitude</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Max Temperature</a></li>
+              <li><a href="#">Humidity</a></li>
+              <li><a href="#">Cloudiness</a></li>
+              <li><a href="#">Wind Speed</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <html>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: left;
+        padding: 32px;
+        color: darkcyan;
+        font-family: times;
+        font-size: 150%;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+    
+    .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+        -ms-flex: 50%; /* IE10 */
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 10px;
+        vertical-align: middle;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 500%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    </style>
+  
+    <!-- Creates the Overall Grid -->
+    <div class="container">
+  
+      <!-- Second Row -->
+      <div class="row">
+  
+        <!-- First of two columns -->
+        <div class="col-md-8 whitebackground">
+            <header>
+                <h1 id="Header">Summary: Latitude vs. X</h1>
+                <hr>
+              </header>
+              <main class="container-fluid">
+                <section id="landing summary">
+                  <section id="figure">
+                    <img id="landing-image" src="Fig1.png" width=50% alt="Landing Page Image" style='float:left'>
+                  </section>
+                  <p class="double-space">The purpose of this project was to analyze how weather changes as you get closer to the equator.  To accomplish this analysis, we first pulled data from the OpenWeather Map API to assemble a dataset on over 500 cities. </p>
+                  <p class="double-space">After assembling the dataset, we used Maplotlib to plot various aspects of the weather vs. latitude.  Factors we looked at included: temperature, cloudiness, wind speed, and humidity.  This site provides the source data and visualizations created as part of the analysis, as we as explanations and descriptions of any trends and correlations witnessed.</p>
+                </section>
+              </main>
+              
+        </div>
+  
+        <!-- Second of two columns -->
+        <div class="col-md-4 whitebackground">
+            <header>
+                <h1 id="Header">Visualizations</h1>
+                <hr>
+              </header>
+              <main class="container-fluid">
+                <div class="row"> 
+                  <div class="column">
+                    <a href="temp.html">
+                      <img src="Fig1.png" style="width:100%">
+                    </a>
+                  </div>
+                  <div class="column">
+                    <a href="humid.html">
+                      <img src="Fig2.png" style="width:100%">
+                    </a>
+                  </div>  
+                  <div class="column">
+                      <a href="cloud.html">
+                          <img src="Fig3.png" style="width:100%">
+                      </a>
+                  </div>
+                  <div class="column">
+                      <a href="wind.html">
+                          <img src="Fig4.png" style="width:100%">
+                      </a>
+                  </div>
+                </div>
+              </main>
+        </div>
+      </div>
+
+
+      <script src=“//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
+      <script src=“//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js”></script>
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+/*
+ External CSS Stylesheet
+ */
+
+ /* Styling for HTML elements */
+body {
+    background-color: lightgrey;
+}
+
+  /* Selecting elements by class */
+
+.whitebackground {
+    background-color: white;
+    padding: 24px;
+    float: left;
+}
+
+.darkcyanbackground {
+    background-color: darkcyan;
+    color: white;
+    text-align: right;
+    font-family: times;
+    font-size: 175%;
+ }
+
+
+
+  /* Selecting elements by ID */
+#Header {
+    color: darkcyan;
+    font-family: times;
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: 50px;
+
+}
+
+.double-space {
+    line-height: 2;
+    position: relative;
+    top: -.5em;
+}
+  
